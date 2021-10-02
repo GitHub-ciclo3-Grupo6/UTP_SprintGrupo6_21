@@ -27,13 +27,14 @@
         <label> <input type="checkbox" value="remember-me" /> Recordar </label>
       </div>
       <!--       <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button> -->
-      <a href="../admin/index.html" class="w-100 btn btn-lg btn-primary"
-        >Iniciar sesión</a
+
+      <router-link class="w-100 btn btn-lg btn-primary" to="/admin"
+        >Iniciar sesión</router-link
       >
       <p class="mt-3 mb-5 mb-3 text-muted">&copy; 2017–2021</p>
     </form>
-    <a href="../index.html" class="w-100 btn btn-lg btn-danger"
-      >Volver a Inicio</a
+    <router-link class="w-100 btn btn-lg btn-danger" to="/"
+      >Volver a Inicio</router-link
     >
   </main>
   <!-- <div class="login">

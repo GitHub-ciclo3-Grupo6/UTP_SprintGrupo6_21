@@ -26,7 +26,9 @@
       />
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-          <a class="nav-link px-3" href="../login/index.html">Cerrar sesión</a>
+          <router-link class="nav-link px-3" to="/login"
+            >Cerrar sesión</router-link
+          >
         </div>
       </div>
     </header>

@@ -3,7 +3,10 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">FerreSoft</a>
+          <a class="navbar-brand"
+            ><img class="" src="@/assets/img/logo.svg" alt="" width="20" />
+            FerreSoft</a
+          >
           <button
             class="navbar-toggler"
             type="button"

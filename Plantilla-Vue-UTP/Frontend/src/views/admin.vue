@@ -26,9 +26,9 @@
       />
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-          <router-link class="nav-link px-3" to="/login"
-            >Cerrar sesión</router-link
-          >
+          <a class="nav-link px-3" href="" @click="cerrarSesion()">
+            Cerrar sesión
+          </a>
         </div>
       </div>
     </header>
@@ -209,6 +209,8 @@
 /* import Category from "../components/admin/category.vue";
 import Article from "../components/admin/article.vue";
 import User from "../components/admin/user.vue"; */
+
+import { mapActions } from "vuex";
 export default {
   components: {
     /*  Category,
@@ -222,6 +224,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["cerrarSesion"]),
     changeOption(i) {
       this.option = i;
     },

@@ -1,6 +1,6 @@
 <template>
   <main class="form-signin">
-    <form>
+    <form @submit.prevent="login(usuario)">
       <img class="mb-4" src="@/assets/img/logo.svg" alt="" width="72" />
       <h1 class="h3 mb-3 fw-normal">Favor Inicie sesión</h1>
 
@@ -10,6 +10,7 @@
           class="form-control"
           id="floatingInput"
           placeholder="name@example.com"
+          v-model="usuario.email"
         />
         <label for="floatingInput">Correo</label>
       </div>
@@ -19,6 +20,7 @@
           class="form-control"
           id="floatingPassword"
           placeholder="Password"
+          v-model="usuario.password"
         />
         <label for="floatingPassword">Contraseña</label>
       </div>
@@ -26,16 +28,19 @@
       <div class="checkbox mb-3">
         <label> <input type="checkbox" value="remember-me" /> Recordar </label>
       </div>
-      <!--       <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button> -->
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        Iniciar sesión
+      </button>
 
-      <router-link class="w-100 btn btn-lg btn-primary" to="/admin"
+      <!-- <router-link class="w-100 btn btn-lg btn-primary" to="/admin"
         >Iniciar sesión</router-link
-      >
+      > -->
       <p class="mt-3 mb-5 mb-3 text-muted">&copy; 2017–2021</p>
     </form>
     <router-link class="w-100 btn btn-lg btn-danger" to="/"
       >Volver a Inicio</router-link
     >
+    {{ usuario }}
   </main>
   <!-- <div class="login">
     <div class="mt-5 login-content">
@@ -83,26 +88,20 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
-      form: {
-        email: "",
-        name: "",
-        food: null,
-        checked: [],
+      usuario: {
+        email: "juanito1@gmai.com",
+        password: "1231232",
       },
-      foods: [
-        { text: "Select One", value: null },
-        "Carrots",
-        "Beans",
-        "Tomatoes",
-        "Corn",
-      ],
       show: true,
     };
   },
+  computed: {},
   methods: {
+    ...mapActions(["login"]),
     onSubmit(event) {
       event.preventDefault();
       alert(JSON.stringify(this.form));

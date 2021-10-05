@@ -152,7 +152,7 @@
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img
-            src="../assets/img/categoria3.jpg"
+            src="../assets/img/categoria2.jpg"
             width="140"
             height="140"
             alt=""
@@ -251,7 +251,7 @@
               img-fluid
               mx-auto
             "
-            src="../assets/img/trabajo1.jpg"
+            src="../assets/img/trabajo2.jpg"
             width="500"
             height="500"
             alt=""
@@ -286,7 +286,7 @@
               img-fluid
               mx-auto
             "
-            src="../assets/img/trabajo1.jpg"
+            src="../assets/img/trabajo3.jpg"
             width="500"
             height="500"
             alt=""

@@ -30,11 +30,14 @@ mongoose.connect(uri, option)
 const authRoutes = require('./routes/auth');
 const validaToken = require('./routes/validate-token');
 const admin = require('./routes/admin');
+const product = require('./routes/product');
 
 // route middlewares
 app.use('/api/user', authRoutes);
 
 app.use('/api/admin', validaToken, admin)
+
+app.use('/api/admin/product', validaToken, product)
 
 // route middlewares
 app.get('/', (req, res) => {

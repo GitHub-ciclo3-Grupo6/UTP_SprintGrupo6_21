@@ -11,7 +11,7 @@
             @click="$emit('update:option', 1)"
             :class="[option == 1 ? 'active' : '']"
             aria-current="page"
-            href="#"
+            href="/admin"
           >
             <span data-feather="home"></span>
             Dashboard
@@ -22,7 +22,7 @@
             class="nav-link"
             @click="$emit('update:option', 2)"
             :class="[option == 2 ? 'active' : '']"
-            href="#"
+            href="/admin/order"
           >
             <span data-feather="file"></span>
             Pedidos
@@ -33,7 +33,7 @@
             class="nav-link"
             @click="$emit('update:option', 3)"
             :class="[option == 3 ? 'active' : '']"
-            href="#"
+            href="/admin/product"
           >
             <span data-feather="shopping-cart"></span>
             Productos
@@ -44,7 +44,7 @@
             class="nav-link"
             @click="$emit('update:option', 4)"
             :class="[option == 4 ? 'active' : '']"
-            href="#"
+            href="/admin/client"
           >
             <span data-feather="users"></span>
             Clientes
@@ -55,7 +55,7 @@
             class="nav-link"
             @click="$emit('update:option', 5)"
             :class="[option == 5 ? 'active' : '']"
-            href="#"
+            href="/admin/user"
           >
             <span data-feather="users"></span>
             Usuarios
@@ -66,7 +66,7 @@
             class="nav-link"
             @click="$emit('update:option', 6)"
             :class="[option == 6 ? 'active' : '']"
-            href="#"
+            href="/admin/report"
           >
             <span data-feather="bar-chart-2"></span>
             Reportes

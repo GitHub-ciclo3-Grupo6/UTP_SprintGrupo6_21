@@ -34,7 +34,9 @@
             </ul>
             <form class="d-flex">
               <!-- <button class="btn btn-outline-success" type="submit">Iniciar sesión</button> -->
-              <router-link class="nav-link" to="/login">Acceder</router-link>
+              <router-link class="btn btn-outline-success" to="/login"
+                >Acceder</router-link
+              >
             </form>
           </div>
         </div>

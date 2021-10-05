@@ -29,7 +29,7 @@
         <div class="carousel-item active">
           <img
             class="blur"
-            src="https://placekitten.com/1240/720"
+            src="../assets/img/banner1.jpg"
             width="100%"
             focusable="false"
             alt=""
@@ -55,7 +55,7 @@
         <div class="carousel-item opacity-100">
           <img
             class="blur"
-            src="https://placekitten.com/1240/720"
+            src="../assets/img/banner2.jpg"
             width="100%"
             focusable="false"
             alt=""
@@ -79,7 +79,7 @@
         <div class="carousel-item opacity-100">
           <img
             class="blur"
-            src="https://placekitten.com/1240/720"
+            src="../assets/img/banner3.jpg"
             width="100%"
             focusable="false"
             alt=""
@@ -132,7 +132,7 @@
       <div class="row">
         <div class="col-lg-4">
           <img
-            src="https://placekitten.com/140/140"
+            src="../assets/img/categoria1.jpg"
             width="140"
             height="140"
             alt=""
@@ -152,7 +152,7 @@
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img
-            src="https://placekitten.com/140/140"
+            src="../assets/img/categoria3.jpg"
             width="140"
             height="140"
             alt=""
@@ -172,7 +172,7 @@
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img
-            src="https://placekitten.com/140/140"
+            src="../assets/img/categoria3.jpg"
             width="140"
             height="140"
             alt=""
@@ -216,7 +216,7 @@
               img-fluid
               mx-auto
             "
-            src="https://placekitten.com/500/500"
+            src="../assets/img/trabajo1.jpg"
             width="500"
             height="500"
             alt=""
@@ -251,7 +251,7 @@
               img-fluid
               mx-auto
             "
-            src="https://placekitten.com/500/500"
+            src="../assets/img/trabajo1.jpg"
             width="500"
             height="500"
             alt=""
@@ -286,7 +286,7 @@
               img-fluid
               mx-auto
             "
-            src="https://placekitten.com/500/500"
+            src="../assets/img/trabajo1.jpg"
             width="500"
             height="500"
             alt=""

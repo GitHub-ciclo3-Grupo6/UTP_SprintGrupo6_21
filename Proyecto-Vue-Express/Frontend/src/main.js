@@ -8,8 +8,9 @@ import axios from 'axios'
 /* axios.defaults.baseURL = "https://app-ferre.herokuapp.com/api" */
 import VueToastr from "vue-toastr";
 Vue.use(VueToastr);
-
-axios.defaults.baseURL = 'http://localhost:3001/api';
+/* 
+axios.defaults.baseURL = 'http://localhost:3001/api'; */
+ axios.defaults.baseURL = "https://back-ferresoft.herokuapp.com/api" 
 //Obtener el token de localstorage
 store._actions.obtenerToken[0]();
 

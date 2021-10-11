@@ -6,6 +6,8 @@ import { router } from './routes'
 //Axios para llamadas
 import axios from 'axios'
 /* axios.defaults.baseURL = "https://app-ferre.herokuapp.com/api" */
+import VueToastr from "vue-toastr";
+Vue.use(VueToastr);
 
 axios.defaults.baseURL = 'http://localhost:3001/api';
 //Obtener el token de localstorage

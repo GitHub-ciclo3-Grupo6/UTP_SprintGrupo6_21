@@ -183,6 +183,7 @@
                     class="btn btn-primary"
                     v-if="(editar == false)"
                     @click="registrarProducto(producto)"
+                    data-bs-dismiss="modal"
                   >
                     Registrar
                   </button>
@@ -191,6 +192,7 @@
                     class="btn btn-primary"
                     v-if="editar"
                     @click="editProducto()"
+                    data-bs-dismiss="modal"
                   >
                     Editar
                   </button>
@@ -235,6 +237,7 @@
                     type="button"
                     class="btn btn-primary"
                     @click="deleteProducto(productoED)"
+                    data-bs-dismiss="modal"
                   >
                     Eliminar
                   </button>
@@ -247,7 +250,7 @@
     </div>
   </div>
 </template>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
 import HeaderAdmin from '@/components/admin/header.vue'
 import NavAdmin from '@/components/admin/nav.vue'
@@ -304,6 +307,7 @@ export default {
         .then((res) => {
           console.log(res.data)
           this.productos.push(res.data.data)
+          this.$toastr.s('Registrado correctamente')
         })
         .catch((e) => {
           console.log(e.response)
@@ -327,6 +331,7 @@ export default {
             (item) => item._id === res.data._id,
           )
           this.productos.splice(index, 1)
+          this.$toastr.e('Eliminado correctamente')
         })
         .catch((e) => {
           console.log(e.response)
@@ -343,6 +348,7 @@ export default {
             (item) => item._id === res.data._id,
           )
           this.productos[index] = res.data
+          this.$toastr.s('Editado correctamente')
         })
         .catch((e) => {
           console.log(e.response)
@@ -360,3 +366,4 @@ export default {
 <style scoped>
 @import '../../assets/css/dashboard.css';
 </style>
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />

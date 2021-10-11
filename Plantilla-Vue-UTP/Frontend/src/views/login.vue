@@ -26,7 +26,10 @@
       </div>
 
       <div class="checkbox mb-3">
-        <label> <input type="checkbox" value="remember-me" /> Recordar </label>
+        <label>
+          <input type="checkbox" value="remember-me" />
+          Recordar
+        </label>
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">
         Iniciar sesión
@@ -37,9 +40,9 @@
       > -->
       <p class="mt-3 mb-5 mb-3 text-muted">&copy; 2017–2021</p>
     </form>
-    <router-link class="w-100 btn btn-lg btn-danger" to="/"
-      >Volver a Inicio</router-link
-    >
+    <router-link class="w-100 btn btn-lg btn-danger" to="/">
+      Volver a Inicio
+    </router-link>
     {{ usuario }}
   </main>
   <!-- <div class="login">
@@ -88,32 +91,32 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex'
 export default {
   data() {
     return {
       usuario: {
-        email: "juanito1@gmai.com",
-        password: "1231232",
+        email: 'juanito1@gmai.com',
+        password: '1231232',
       },
       show: true,
-    };
+    }
   },
   computed: {},
   methods: {
-    ...mapActions(["login"]),
+    ...mapActions(['login']),
     onSubmit(event) {
-      event.preventDefault();
-      alert(JSON.stringify(this.form));
-      this.$router.push("admin");
+      event.preventDefault()
+      alert(JSON.stringify(this.form))
+      this.$router.push('admin')
     },
     onReset(event) {
-      event.preventDefault();
-      this.$router.push("/");
+      event.preventDefault()
+      this.$router.push('/')
     },
   },
-};
+}
 </script>
 <style scoped>
-@import "../assets/css/login.css";
+@import '../assets/css/login.css';
 </style>

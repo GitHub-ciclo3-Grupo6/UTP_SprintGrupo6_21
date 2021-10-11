@@ -5,8 +5,9 @@ import { router } from './routes'
 
 //Axios para llamadas
 import axios from 'axios'
-axios.defaults.baseURL = "https://app-ferre.herokuapp.com"
+/* axios.defaults.baseURL = "https://app-ferre.herokuapp.com/api" */
 
+axios.defaults.baseURL = 'http://localhost:3001/api';
 //Obtener el token de localstorage
 store._actions.obtenerToken[0]();
 

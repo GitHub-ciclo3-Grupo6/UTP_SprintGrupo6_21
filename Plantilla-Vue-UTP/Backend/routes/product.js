@@ -53,6 +53,74 @@ router.post('/register', async (req, res) => {
     }
 })
 
+//Get con todos los productos
+
+router.get('/all',async(req,res)=>{
+
+    try {
+
+        const pdoductDb=await Product.find();
+        res.json(pdoductDb);
+        
+    } catch (error) {
+
+        return res.status(500).json({
+
+            mensaje:'Ocurrio un error',
+            error
+        })   
+    }
+});
+
+//Delete eliminar una nota
+
+router.delete('/:id', async(req,res)=>{
+
+
+    const _id=req.params.id;
+
+    try {
+
+        const pdoductDb=await Product.findByIdAndDelete({_id});
+        if(!pdoductDb){ 
+            return res.status(400).json({ 
+                mensaje: 'No se encontró el id indicado', error 
+            }) 
+        } 
+        res.json(pdoductDb);
+        
+    } catch (error) {
+
+        return res.status(500).json({
+
+            mensaje:'Ocurrio un error',
+            error
+        })
+    }
+});
+
+//Actualizar una Product
+
+router.put('/:id', async(req,res)=>{
+
+    const _id=req.params.id;
+    const body =req.body;
+
+    try {
+
+        const pdoductDb= await Product.findByIdAndUpdate(_id,body,{new:true});
+        res.json(pdoductDb);
+        
+    } catch (error) {
+
+        return res.status(500).json({
+
+            mensaje:'Ocurrio un error',
+            error
+        })
+        
+    }
+})
 
 //Siempre, importante tener export para utilizarlo en otro archivo
 //Se esta utilizando en index.js  

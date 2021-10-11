@@ -25,7 +25,7 @@ const store = new Vuex.Store({
                     },
                     body: JSON.stringify(usuario)
                 }) */
-                const res = await axios.post('/api/user/login', usuario)
+                const res = await axios.post('/user/login', usuario)
                 const usuarioDB = res.data
                 console.log(usuarioDB.data.token)
                 commit('setToken', usuarioDB.data.token)

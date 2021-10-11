@@ -210,12 +210,7 @@
         </div>
         <div class="col-md-5">
           <img
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-            "
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
             src="../assets/img/trabajo1.jpg"
             width="500"
             height="500"
@@ -245,12 +240,7 @@
         </div>
         <div class="col-md-5 order-md-1">
           <img
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-            "
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
             src="../assets/img/trabajo2.jpg"
             width="500"
             height="500"
@@ -269,7 +259,8 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">
-            And lastly, this one. <span class="text-muted">Checkmate.</span>
+            And lastly, this one.
+            <span class="text-muted">Checkmate.</span>
           </h2>
           <p class="lead">
             And yes, this is the last block of representative placeholder
@@ -280,12 +271,7 @@
         </div>
         <div class="col-md-5">
           <img
-            class="
-              bd-placeholder-img bd-placeholder-img-lg
-              featurette-image
-              img-fluid
-              mx-auto
-            "
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
             src="../assets/img/trabajo3.jpg"
             width="500"
             height="500"
@@ -305,23 +291,25 @@
     </div>
     <!-- /.container -->
     <transition name="fade">
-      <a v-if="!isVisibleUpButton" href="#" class="back-to-top"
-        ><b-icon-arrow-up-circle-fill
+      <a v-if="!isVisibleUpButton" href="#" class="back-to-top">
+        <b-icon-arrow-up-circle-fill
           font-scale="3"
-        ></b-icon-arrow-up-circle-fill
-      ></a>
+        ></b-icon-arrow-up-circle-fill>
+      </a>
     </transition>
     <footer class="container">
       <p class="float-end"><a href="#">Back to top</a></p>
       <p>
-        &copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot;
+        &copy; 2017–2021 Company, Inc. &middot;
+        <a href="#">Privacy</a>
+        &middot;
         <a href="#">Terms</a>
       </p>
     </footer>
   </div>
 </template>
 <script>
-import NavBar from "../components/navbar.vue";
+import NavBar from '../components/navbar.vue'
 export default {
   components: {
     NavBar,
@@ -330,29 +318,30 @@ export default {
     return {
       isVisibleUpButton: true,
       scrollPosition: 0,
-    };
+    }
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    document.title = this.$route.meta.title
+    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll() {
-      this.scrollPosition = window.scrollY;
+      this.scrollPosition = window.scrollY
     },
   },
   watch: {
     scrollPosition() {
       if (this.scrollPosition > 100) {
-        this.isVisibleUpButton = false;
+        this.isVisibleUpButton = false
       } else {
-        this.isVisibleUpButton = true;
+        this.isVisibleUpButton = true
       }
     },
   },
-};
+}
 </script>
 <style scoped>
-@import "../assets/css/carousel.css";
+@import '../assets/css/carousel.css';
 </style>
 <style>
 .back-to-top {

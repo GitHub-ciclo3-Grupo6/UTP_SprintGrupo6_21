@@ -7,16 +7,7 @@
         <NavAdmin :option.sync="option"></NavAdmin>
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
           <div
-            class="
-              d-flex
-              justify-content-between
-              flex-wrap flex-md-nowrap
-              align-items-center
-              pt-3
-              pb-2
-              mb-3
-              border-bottom
-            "
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
             <h1 class="h2">Principal</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
@@ -101,8 +92,8 @@
 /* import Category from "../components/admin/category.vue";
 import Article from "../components/admin/article.vue";
 import User from "../components/admin/user.vue"; */
-import HeaderAdmin from "@/components/admin/header.vue";
-import NavAdmin from "@/components/admin/nav.vue";
+import HeaderAdmin from '@/components/admin/header.vue'
+import NavAdmin from '@/components/admin/nav.vue'
 
 export default {
   components: {
@@ -116,18 +107,21 @@ export default {
     return {
       option: 1,
       visibleSidebar: true,
-    };
+    }
+  },
+  created() {
+    document.title = this.$route.meta.title
   },
   methods: {
     changeOption(i) {
-      this.option = i;
+      this.option = i
     },
     isVisibleSidebar() {
-      this.visibleSidebar = !this.visibleSidebar;
+      this.visibleSidebar = !this.visibleSidebar
     },
   },
-};
+}
 </script>
 <style scoped>
-@import "../../assets/css/dashboard.css";
+@import '../../assets/css/dashboard.css';
 </style>

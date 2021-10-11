@@ -281,7 +281,7 @@ export default {
     }
   },
   created() {
-    this.listarProductos()
+    this.listarProductos(), (document.title = this.$route.meta.title)
   },
   computed: {
     ...mapState(['token']),

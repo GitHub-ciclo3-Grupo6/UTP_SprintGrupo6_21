@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar/>
+    <NavBar />
     <h1>Aqui estan mis servicios</h1>
     <router-link to="/">Home</router-link>
   </div>
@@ -9,7 +9,10 @@
 import NavBar from '../components/navbar.vue'
 export default {
   components: {
-    NavBar
-  }
+    NavBar,
+  },
+  created() {
+    document.title = this.$route.meta.title
+  },
 }
 </script>

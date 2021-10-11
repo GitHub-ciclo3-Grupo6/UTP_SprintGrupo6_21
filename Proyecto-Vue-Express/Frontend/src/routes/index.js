@@ -17,13 +17,13 @@ import Services from '../views/services.vue'
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/login', component: Login },
-    { path: '/admin', component: Admin, meta: { rutaProtegida: true } },
-    { path: '/admin/product', component: Product, meta: { rutaProtegida: true } },
-    { path: '/admin/order', component: Order, meta: { rutaProtegida: true } },
-    { path: '/admin/user', component: User, meta: { rutaProtegida: true } },
-    { path: '/services', component: Services }
+    { path: '/', component: Home, meta: {title:"FerreSoft" } },
+    { path: '/login', component: Login, meta: { title:"Login - FerreSoft" } },
+    { path: '/admin', component: Admin, meta: { rutaProtegida: true,title:"Admin - FerreSoft" } },
+    { path: '/admin/product', component: Product, meta: { rutaProtegida: true,title:"Productos - FerreSoft" } },
+    { path: '/admin/order', component: Order, meta: { rutaProtegida: true,title:"Ordenes - FerreSoft" } },
+    { path: '/admin/user', component: User, meta: { rutaProtegida: true,title:"Usuarios - FerreSoft" } },
+    { path: '/services', component: Services,meta: {title:"Servicios - FerreSoft" } }
 ]
 
 const router = new VueRouter({

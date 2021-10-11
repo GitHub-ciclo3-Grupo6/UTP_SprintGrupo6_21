@@ -103,6 +103,9 @@ export default {
     }
   },
   computed: {},
+  created() {
+    document.title = this.$route.meta.title
+  },
   methods: {
     ...mapActions(['login']),
     onSubmit(event) {

@@ -11,14 +11,6 @@
           >
             <h1 class="h2">Productos</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                  Compartir
-                </button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                  Exportar
-                </button>
-              </div>
               <button
                 type="button"
                 class="btn btn-sm btn-outline-secondary dropdown-toggle"
@@ -86,8 +78,15 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="productModalLabel">
+                  <h5
+                    class="modal-title"
+                    id="productModalLabel"
+                    v-if="(editar == false)"
+                  >
                     Crear producto
+                  </h5>
+                  <h5 class="modal-title" id="productModalLabel" v-if="editar">
+                    Editar producto
                   </h5>
                   <button
                     type="button"
@@ -317,7 +316,7 @@ export default {
       this.productoED = producto
     },
     questionEdit(producto) {
-      this.producto = producto
+      this.producto = JSON.parse(JSON.stringify(producto))
       this.editar = true
     },
     deleteProducto(producto) {
@@ -347,7 +346,13 @@ export default {
           const index = this.productos.findIndex(
             (item) => item._id === res.data._id,
           )
-          this.productos[index] = res.data
+          this.productos[index]._id = res.data._id
+          this.productos[index].code = res.data.code
+          this.productos[index].name = res.data.name
+          this.productos[index].amount = res.data.amount
+          this.productos[index].purchasePrice = res.data.purchasePrice
+          this.productos[index].salePrice = res.data.salePrice
+          console.log(this.productos[index])
           this.$toastr.s('Editado correctamente')
         })
         .catch((e) => {
